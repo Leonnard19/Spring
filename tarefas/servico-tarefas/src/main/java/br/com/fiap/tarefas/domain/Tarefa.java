@@ -8,9 +8,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
-//@JsonIgnoreProperties(ignoreUnknown = true) //ignora o erro ao serializar o objeto nulo
 @Entity
 @SequenceGenerator(name = "tarefaSequence", sequenceName = "SQ_TAREFA", allocationSize = 1)
+@JsonIgnoreProperties(ignoreUnknown = true) //ignora o erro ao serializar o objeto nulo
 public class Tarefa {
 
     @Id
